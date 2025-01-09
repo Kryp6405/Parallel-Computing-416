@@ -1,0 +1,38 @@
+Problem 1 Analysis
+------------------
+We first set OMP_NUM_THREADS=2, and test the time differences for N=1024 (default) and N=16384 (suggested). 
+Note: For all inputs, outputs for min_dist are the same so normal and parallel programs are running correctly.
+- For the default input, the non parallel program consitently beats the parallel program by at least a ten-thousandth of a second (np - p >= 0.0001)
+	* Non Parallel Avg. Run Time = 0.00171
+	* Parallel Avg. Run Time = 0.00181
+- For the suggested input, the parallel program consistently beats the non parallel program by at least a hundredth of a second (p - np >= 0.01)
+	* Non Parallel Avg. Run Time = 0.441
+	* Parallel Avg. Run Time = 0.430
+
+Now we set OMP_NUM_THREADS=4, and test the same way.
+Note: For all inputs, outputs for min_dist are the same so normal and parallel programs are running correctly.
+- For the default input, the non parallel program consitently beats the parallel program by at least a thousandth of a second (np - p >= 0.001)
+	* Non Parallel Avg. Run Time = 0.00176
+	* Parallel Avg. Run Time = 0.00207
+- For the suggested input, the parallel program consistently beats the non parallel program by around a thousandth of a second (p - np >= 0.001)
+	* Non Parallel Avg. Run Time = 0.439
+	* Parallel Avg. Run Time = 0.431
+
+**TO-DO**
+Now we set OMP_NUM_THREADS=8, and test the same way.
+Note: For all inputs, outputs for min_dist are the same so normal and parallel programs are running correctly.
+- For the default input, the non parallel program consitently beats the parallel program by at least a thousandth of a second (np - p >= 0.001)
+	* Non Parallel Avg. Run Time = 0.00176
+	* Parallel Avg. Run Time = 0.00207
+- For the suggested input, the parallel program consistently beats the non parallel program by around a thousandth of a second (p - np >= 0.001)
+	* Non Parallel Avg. Run Time = 0.439
+	* Parallel Avg. Run Time = 0.431
+
+Now we set OMP_NUM_THREADS=16, and test the same way.
+Note: For all inputs, outputs for min_dist are the same so normal and parallel programs are running correctly.
+- For the default input, the non parallel program consitently beats the parallel program by at least a thousandth of a second (np - p >= 0.001)
+	* Non Parallel Avg. Run Time = 0.00176
+	* Parallel Avg. Run Time = 0.00207
+- For the suggested input, the parallel program consistently beats the non parallel program by around a thousandth of a second (p - np >= 0.001)
+	* Non Parallel Avg. Run Time = 0.439
+	* Parallel Avg. Run Time = 0.431
